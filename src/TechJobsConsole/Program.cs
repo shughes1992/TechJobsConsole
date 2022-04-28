@@ -118,35 +118,42 @@ namespace TechJobsConsole
 
         private static void PrintJobs(List<Dictionary<string, string>> someJobs)
         {
+            //someJobs = list
 
-            foreach (Dictionary<string, string> keyValuePairs in someJobs)
+            foreach (Dictionary<string, string> jobs in someJobs)
             {
-
-
-                foreach (Dictionary<string, string> job in someJobs)
-
+                Console.WriteLine("````````````````");
+                foreach (KeyValuePair<string, string> job in jobs)
                 {
-
-
-                    Console.WriteLine($"Name: {job["name"]}");
-                    Console.WriteLine($"Employer: {job["employer"]}");
-                    Console.WriteLine($"Location: {job["location"]}");
-                    Console.WriteLine($"Position: {job["position type"]}");
-                    Console.WriteLine($"Core Comp: {job["core competency"]}");
-
-                    Console.WriteLine("┈┈┈┈┈┈┈┈┈┈┈┈┈┈❀┈┈┈┈┈┈┈┈┈┈┈┈┈┈");
-
+                    Console.WriteLine($"{job.Key}: {job.Value}");
                 }
+
+                Console.WriteLine("````````````````");
 
             }
 
         }
 
-        //will need to iterate over the LIST of jobs ^
-        //think instead about creating a nested loop
-        //to iterate over each dictionary key. 
-        //Console.WriteLine("PrintJobs is not implemented yet");
-
-
     }
 }
+
+
+//will need to iterate over the LIST of jobs ^
+//think instead about creating a nested loop
+//to iterate over each dictionary key. 
+//Console.WriteLine("PrintJobs is not implemented yet");
+
+//foreach (Dictionary<string, string> job in someJobs)
+
+//{
+
+
+//    Console.WriteLine($"Name: {job["name"]}");
+//    Console.WriteLine($"Employer: {job["employer"]}");
+//    Console.WriteLine($"Location: {job["location"]}");
+//    Console.WriteLine($"Position: {job["position type"]}");
+//    Console.WriteLine($"Core Comp: {job["core competency"]}");
+
+//    Console.WriteLine("┈┈┈┈┈┈┈┈┈┈┈❀┈┈┈┈┈┈┈┈┈┈┈");
+
+//}
