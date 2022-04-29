@@ -120,22 +120,33 @@ namespace TechJobsConsole
         {
             //someJobs = list
 
-            foreach (Dictionary<string, string> jobs in someJobs)
+            int jobCount = someJobs.Count;
+            if (jobCount == 0)
             {
-                Console.WriteLine("````````````````");
-                foreach (KeyValuePair<string, string> job in jobs)
+                Console.WriteLine(" ");
+                Console.WriteLine("Sorry, no results. ");
+            }
+            else
+            {
+                foreach (Dictionary<string, string> jobs in someJobs)
                 {
-                    Console.WriteLine($"{job.Key}: {job.Value}");
-                }
+                    Console.WriteLine("````````````````");
+                    foreach (KeyValuePair<string, string> job in jobs)
+                    {
+                        Console.WriteLine($"{job.Key}: {job.Value}");
+                    }
 
-                Console.WriteLine("````````````````");
+                    Console.WriteLine("````````````````");
+
+                }
 
             }
 
         }
-
     }
 }
+
+   
 
 
 //will need to iterate over the LIST of jobs ^
@@ -148,11 +159,11 @@ namespace TechJobsConsole
 //{
 
 
-//    Console.WriteLine($"Name: {job["name"]}");
-//    Console.WriteLine($"Employer: {job["employer"]}");
-//    Console.WriteLine($"Location: {job["location"]}");
-//    Console.WriteLine($"Position: {job["position type"]}");
-//    Console.WriteLine($"Core Comp: {job["core competency"]}");
+//Console.WriteLine($"Name: {job["name"]}");
+//Console.WriteLine($"Employer: {job["employer"]}");
+//Console.WriteLine($"Location: {job["location"]}");
+//Console.WriteLine($"Position: {job["position type"]}");
+//Console.WriteLine($"Core Comp: {job["core competency"]}");
 
 //    Console.WriteLine("┈┈┈┈┈┈┈┈┈┈┈❀┈┈┈┈┈┈┈┈┈┈┈");
 
