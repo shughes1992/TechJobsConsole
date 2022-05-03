@@ -51,18 +51,19 @@ namespace TechJobsConsole
 
             foreach (Dictionary<string, string> row in AllJobs)
             {
-                foreach (KeyValuePair<string, string> job in row)
-                    //how to check every column in every row for value or search term
-
-                if (job.Value.Contains(value))
+                foreach (KeyValuePair<string, string> kvp in row)
                 {
-                    jobs.Add(row);
-                }
-
+                    if (kvp.Value.ToLower().Contains(value.ToLower()))
+                    {
+                        if (!jobs.Contains(row))
+                        {
+                            jobs.Add(row);
+                        }
+                    }
+                }                 
             }
 
             return jobs;
-
         }
 
 
@@ -76,9 +77,8 @@ namespace TechJobsConsole
             //each row is a job dictionary 
             foreach (Dictionary<string, string> row in AllJobs)
             {
-                string aValue = row[column];
 
-                if (aValue.Contains(value))
+                if (row[column].ToLower().Contains(value.ToLower()))
                 {
                     jobs.Add(row);
                 }
