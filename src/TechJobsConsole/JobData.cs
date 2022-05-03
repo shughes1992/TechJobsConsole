@@ -55,10 +55,8 @@ namespace TechJobsConsole
                 {
                     if (kvp.Value.ToLower().Contains(value.ToLower()))
                     {
-                        if (!jobs.Contains(row))
-                        {
-                            jobs.Add(row);
-                        }
+                        jobs.Add(row);
+                        break;
                     }
                 }                 
             }
